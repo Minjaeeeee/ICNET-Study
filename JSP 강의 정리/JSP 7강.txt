@@ -1,0 +1,93 @@
+1. HTML Form 태그
+ - 서버쪽으로 전달할 때 사용하는 태그이다.
+ - 클라이언트가 요청을 하고 서버에서 요청에 대한 응답!
+ - 이때 클라이언트가 요청할때 사용하는 태그가 form 태그이다.
+
+
+========================================================
+2. form 태그의 종류
+ - type: 태그 종류 지정 (ex. text,password, checkbox, radio, reset)
+ - name: input태그의 이름
+ - value: name에 해당하는 값(ex, name = value)
+
+2-(1) type=text
+ <input type="text" name="name" size="10"> 
+ //만약 name = id면 아이디로 받는것이다!
+
+2-(2) type=password
+ <input type="password" name = "name" size="10">
+
+
+2-(3) type = submit
+ <input type="submit" value="전송"> //버튼을 클릭하면 서버에게 전송된다
+
+ 
+2-(4) type = reset
+ <input type="reset" value="초기화"> //초기화 버튼!
+
+
+2-(5) type = checkbox
+ <input type ="checkbox" name="hobby" value="read"> 독서
+ <input type ="checkbox" name="hobby" value="cook"> 요리
+ <input type ="checkbox" name="hobby" value="run"> 조깅
+ <input type ="checkbox" name="hobby" value="swim"> 수영
+ <input type ="checkbox" name="hobby" value="sleep"> 취침
+  // name은 통일되어야 서버가 구분할 수 있고 타입도 동일하게 설정해준다.
+
+
+2-(6) type = radio
+ <input type = "radio" name = "major" value="kor"> 국어
+ <input type = "radio" name = "major" value="eng" checked="checked" > 영어
+ <input type = "radio" name = "major" value="math"> 수학
+ <input type = "radio" name = "major" value="design"> 디자인
+
+
+2-(7) select //리스트 형태이다.
+ <select name = "protocol">
+	<option value="http">http</option>
+	<option value="ftp" selcted="selected">ftp</option>
+	<option value="smtp">smtp</option>
+	<option value="pop">pop</option>
+ </select>
+========================================================
+
+3. form 태그
+ <form action="FormEx" method="Post">
+설명: FormEx는 요청하는 컴포넌트 이름이다. (join.jsp, info.html, HWorld)
+       Method="post"는 요청을 처리하는 방식(서버에 넘어가는 것을 의미한다.) 
+
+GET: http://IP주소:port번호/컨텍스트/path/MemberJoin?id="abcdefg"&name="홍길동"
+POST: http://IP주소:port번호.컨텍스트/path/Memberjoin
+
+(13분 50초 html파일 한번 작성해보자!)
+========================================================
+
+4. 서블릿 파라미터
+- form태그의 summit 버튼을 클릭하여 데이터를 서버를 전송하면 해당파일(서블릿)에서는 HttpServletRequest객체를 이용하여 파라미터 값을 얻을 수 있다.
+
+4-(1) 관련 메서드
+- getParameter(name)
+- getParameterValues(name) //복수 값일때(체크박스)
+- getParameterNames() //이름들이 배열로 쭉 뽑아나옴(form에서 넘어온 이름들을 넣어버림)
+  < 반환값은 전부 STRING이므로 무조건 기억하자!! >
+(사용하는 것은 24분에 나와있으니 확인해볼 것!) //여기서 알 수 있는건 아! 로그인 폼을 이해할 수 있겠다!
+
+========================================================
+
+5. 한글처리
+ - 개발자가 한글 인코딩을 하지 않으면 한글이 깨져 보이는 현상이 있습니다.
+ - get방식과 post방식에 따라서 한글처리 방식에 차이가 있다.
+
+5-(1) get방식 요청(server.xml 수정)
+     <Connector URlEncodiong="EUC-KR" port="8181" ~~>
+
+5-(2) Post방식 요청( request.setCharacterEncoding() 메소드 이용
+     request.setCharacterEncoding("EUC-KR") //이렇게 설정!
+
+========================================================
+
+
+
+
+
+
