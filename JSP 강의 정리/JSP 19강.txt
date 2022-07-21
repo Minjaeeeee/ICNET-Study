@@ -1,0 +1,10 @@
+1. SQL Developer(오라클에서 제공하는 데이터베이스 전용 gui를 설치한다)
+
+2. 회원가입 및 회원정보 수정 프로그래밍
+ (1) join.html -> joinOk(서블릿) -> joinResult.jsp -> login.html -> LoginOK(서블릿) -> loginResult.jsp -> modify.jsp(정보를 수정하는 것) -> ModifyOk 
+ -> modifyResult.jsp -> logout.jsp
+ 
+ (2) MVC패턴 
+  - VIEW(JSP) , MODEL(DB) , CONTROLER(아직 나오지않음)
+
+ (3)

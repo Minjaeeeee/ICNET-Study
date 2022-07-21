@@ -1,0 +1,38 @@
+1. JDBC 살펴보기
+  - JAVA 프로그램에서 SQL문을 실행하여 데이터를 관리하기 위한 JAVA API이다.
+  - ORACLE을 사용하므로 ORACLE용 JDBC를 사용
+  - 자바에서 DB로 신호를 보내고 받고 할때 중간매개체하는 역할을 진행한다.(API이다.)
+  - 별도의 프로그램을 만들필요 없이 해당 데이터 베이스의 JDBC를 이용하면 하나의 프로그램으로 데이터 베이스를 관리할 수 있다.
+  - 여러가지 DB를 각각 공부할 필요가X , JDBC 드라이버가 설치 되어 있으면 바로 개발이 연속해서 이어질수가 있음
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. 데이터베이스 연결순서
+ (1) JDBC 드라이버 로드
+  (Class.forName("oracle.jdbc.driver.OracleDriver)
+ 
+ (2) 데이터베이스 연결
+  (DriverManager.getConnection(JDBC URL, 계정아이디, 비밀번호); //Connection 객체 생성합니다
+ 
+ (3) sql문 실행
+  (connection.createStatement(); //Statement 객체를 통해 SQL문이 실행 됩니다.
+
+ (4) 데이터베이스 연결 해제 
+  statement.executeQuery(), statement.executeUpdate() //SQL문의 결과값을 ResultSet 객체로 받습니다.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Statement 객체 살펴보기  //쿼리, 델리트하거나 인서트하거나 업데이트하거나 등 쿼리를 실행시켜주는 객체
+  - Statement라는 인터페이스가 있고 그 안에 executeQuery(), executeUpdate() 두개가 존재한다
+
+  - executeQuery() : 결과물로 결과값이 생기는경우 사용 ex) selete
+  - executeUpdate() : sql실행후 테이블의 내용만 변경되는 경우를 사용한다!, 반환형 int  ex) insert, delete, update 
+ 
+
+3-(1) executeQuery() 실행후 반환되는 레코드 셋
+  - ResultSet 객체로 반환해준다 
+     = next(): 다음 레코드로 이동
+     = previous() : 이전 레코드로 이동
+     = first() : 처음으로 이동
+     = last() : 마지막으로 이동
+     = get메소드(getString,getInt)
+   
+  - BOF 아래로 첫번째 로우데이터 두번째 로우데이터 ---- N 로우데이터(EOF)까지 있다.
