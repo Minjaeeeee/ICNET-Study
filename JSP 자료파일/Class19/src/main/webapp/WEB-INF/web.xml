@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
+  <servlet>
+    <description></description>
+    <display-name>JoinOk</display-name>
+    <servlet-name>JoinOk</servlet-name>
+    <servlet-class>servletFile.JoinOk</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JoinOk</servlet-name>
+    <url-pattern>/JoinOk</url-pattern>
+  </servlet-mapping>
+  <display-name>Class19</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>modifyOk</display-name>
+    <servlet-name>modifyOk</servlet-name>
+    <servlet-class>servletFile.modifyOk</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifyOk</servlet-name>
+    <url-pattern>/modifyOk</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loginOk</display-name>
+    <servlet-name>loginOk</servlet-name>
+    <servlet-class>servletFile.loginOk</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginOk</servlet-name>
+    <url-pattern>/loginOk</url-pattern>
+  </servlet-mapping>
+ 
+
+  <servlet>
+    <description></description>
+    <display-name>JoinOK</display-name>
+    <servlet-name>JoinOK</servlet-name>
+    <servlet-class>servletFile.JoinOK</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JoinOK</servlet-name>
+    <url-pattern>/JoinOK</url-pattern>
+  </servlet-mapping>
+</web-app>
