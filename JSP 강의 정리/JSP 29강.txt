@@ -1,0 +1,7 @@
+1.  글 목록 페이지 만들기
+  (1) list.do
+  (2)BFrontController(글 목록 로직 분기)
+      (2)-1 결과를 4까지 갔다가 3에서 결과를 받으면  list.jsp에 출력을 진행한다.
+  (3)BListCommand(DAO에 글 목록 생성 요청)
+  (4)BDao(DB작업을 진행)
+  

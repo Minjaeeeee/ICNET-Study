@@ -1,0 +1,18 @@
+1. EL(Expression Language)
+ - 표현식 또는 액션 태그를 대신해서 값을 표현하는 언어입니다.
+	<%= value %> -------> ${value}
+                 [표현식]                    [EL]
+ 
+ - EL연산자(산술,관계형,조건,논리) 우리가 다 아는 것임
+ 
+
+2. 내장객체
+  - pageScope: page객체를 참조하는 객체
+  - requestScope: request객체를 참조하는 객체
+  - sessionScope: session객체를 참조하는 객체
+  - applicationScope: application 객체를 참조하는 객체
+
+  - param: 요청 파라미터를 참조하는 객체
+  - paramValues: 요청 파라미터(배열)를 참조하는 객체
+  - initParam: 초기화 파라미터를 참조하는 객체
+  - cookie: cookie 객체를 참조하는 객체
