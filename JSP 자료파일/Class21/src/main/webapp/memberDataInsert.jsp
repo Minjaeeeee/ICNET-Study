@@ -23,7 +23,7 @@
 <title>Insert title here</title>
 </head>
 
-<body>
+<body> 
 
 	<%
 	try
@@ -31,33 +31,33 @@
 		Class.forName(driver);
 		connection = DriverManager.getConnection(url,uid,upw);
 		int n;
-		String query = "Insert into MEMBERFORPRE (id,pw,name,phone) values (?,?,?,?)"; //°£´ÜÇÏ°Ô ³Ö¾îº¸ÀÚ! ¾Õ¿¡¼­ Çß´ø°Åº¸¸é ³Ê¹« º¹ÀâÇÔ!
+		String query = "Insert into MEMBERFORPRE (id,pw,name,phone) values (?,?,?,?)"; //ê°„ë‹¨í•˜ê²Œ ë„£ì–´ë³´ì! ì•ì—ì„œ í–ˆë˜ê±°ë³´ë©´ ë„ˆë¬´ ë³µì¡í•¨!
 		preparedStatement = connection.prepareStatement(query);
 		
-		//preparedStatement´Â Statement °´Ã¼ÀÇ ³­ÀâÇÑ ÄÚµå¸¦ °³¼±ÇÑ ¾÷µ¥ÀÌÆ®µÈ °´Ã¼ÀÌ´Ù!
+		//preparedStatementëŠ” Statement ê°ì²´ì˜ ë‚œì¡í•œ ì½”ë“œë¥¼ ê°œì„ í•œ ì—…ë°ì´íŠ¸ëœ ê°ì²´ì´ë‹¤!
 		preparedStatement.setString(1,"abc");
 		preparedStatement.setString(2,"123");
-		preparedStatement.setString(3,"È«±æµ¿");
+		preparedStatement.setString(3,"í™ê¸¸ë™");
 		preparedStatement.setString(4,"010-1234-5678");
 		n = preparedStatement.executeUpdate();
 		
 		preparedStatement.setString(1,"def");
 		preparedStatement.setString(2,"456");
-		preparedStatement.setString(3,"È«±æÀÚ");
+		preparedStatement.setString(3,"í™ê¸¸ì");
 		preparedStatement.setString(4,"010-9012-3456");
 		n = preparedStatement.executeUpdate();
 		
 		
 		preparedStatement.setString(1,"ghi");
 		preparedStatement.setString(2,"789");
-		preparedStatement.setString(3,"È«±æ¼ø");
+		preparedStatement.setString(3,"í™ê¸¸ìˆœ");
 		preparedStatement.setString(4,"010-7890-1234");
 		n = preparedStatement.executeUpdate();
 		
 		
 		preparedStatement.setString(1,"AAA");
 		preparedStatement.setString(2,"111");
-		preparedStatement.setString(3,"È«±æ¹ü");
+		preparedStatement.setString(3,"í™ê¸¸ë²”");
 		preparedStatement.setString(4,"010-5555-5555");
 		n = preparedStatement.executeUpdate();
 		
