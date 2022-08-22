@@ -28,7 +28,7 @@
  	<br/>
  	<c:out value="${error}"/>
  	
- 	<hr/> 
+ 	<hr/>
  	
  	<c:if test="${1+2==3}"> 
  	 1 + 2 = 3
